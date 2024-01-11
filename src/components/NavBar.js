@@ -1,16 +1,29 @@
 import React from "react";
 
 function NavBar() {
+  const logo = "GAG_Profile.jpg";
   return (
-    <div className="flex flex-row   bg-black color text-white mt-5 mb-5 shadow-slate-800">
-      <div className="basis-1/2 text-5xl ml-5">G</div>
-      <div className="basis-1/2">
-        <ul className="flex justify-end mt-3 ">
-          <li className="px-4">About me</li>
-          <li className="px-4">My Work</li>
-          <li className="px-4">Contact me</li>
-        </ul>
+    <div className="container mx-auto flex flex-wrap p-5 justify-between items-center">
+      <a
+        href="#"
+        className="flex title-font font-medium items-center text-gray-900 mb-4"
+      >
+        <img src={logo} className="w-100 h-20 mr-2 rounded-full" alt="Logo" />
+      </a>
+      <div className="flex flex-wrap items-center text-base justify-center">
+        <a href="#aboutme" className="mr-5">
+          About Me
+        </a>
+        <a href="#mywork" className="mr-5">
+          My Work
+        </a>
+        <a href="#contactme" className="mr-5">
+          Contact Me
+        </a>
       </div>
+      <button className="inline-flex items-center bg-slate-700 border-0 p-3 mt-4 rounded-lg text-white">
+        Download CV
+      </button>
     </div>
   );
 }

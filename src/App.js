@@ -1,30 +1,44 @@
-import NavBar from "./components/NavBar";
-import Card from "./components/Card";
+const logo = "GAG_Profile.jpg";
 function App() {
   return (
-    <div className="relative mx-auto">
-      <NavBar />
+    <>
+      <div className="overscroll-none relative">
+        <nav className="flex justify-between  text-white w-full fixed top-0 p-2  bg-black z-50">
+          <a href="#" className="">
+            <img
+              src={logo}
+              className="w-100 h-10 mr-2 rounded-full"
+              alt="Logo"
+            />
+          </a>
+          <div className="grid grid-cols-3 gap-4 align-middle">
+            <a href="#about" className=" p-2">
+              about me
+            </a>
 
-      <section id="hero" className="mb-10 mx-auto h-screen max-h-full">
-        <div className="text-7xl text-center">Hi! I am Gilberto Gabon</div>
-        <div className="text-4xl text-center">Fullstack Developer</div>
-      </section>
-      <section id="aboutme" className="mb-4 h-screen max-h-full">
-        <Card
-          title="About Me"
-          body="This is me and about me. I will describe here who am I."
-        />
-      </section>
-      <section id="mywork" className="mb-4 h-screen max-h-full">
-        <Card
-          title="My Work"
-          body="This section will describe my work and will list down my work here"
-        />
-      </section>
-      <section id="contactme" className="mb-4 h-full max-h-full">
-        <Card title="Contact Me" body="This is where you can contact me" />
-      </section>
-    </div>
+            <a href="#mywork" className=" p-2">
+              my work
+            </a>
+
+            <a href="#contact" className=" p-2">
+              contact me
+            </a>
+          </div>
+        </nav>
+
+        <section id="about" className="h-screen  bg-blue-100 sticky top-14">
+          about me
+        </section>
+        <section id="mywork" className="h-screen bg-blue-300  sticky top-14">
+          my work
+        </section>
+        <section id="contact" className="h-screen  bg-blue-400  sticky top-14">
+          contact me
+        </section>
+
+        <footer className="sticky bottom-5">Copyright</footer>
+      </div>
+    </>
   );
 }
 

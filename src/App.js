@@ -12,22 +12,28 @@ function App() {
             />
           </a>
           <div className="grid grid-cols-3 gap-4 align-middle">
-            <a href="#about" className=" p-2">
+            <a href="#about" className="p-2">
               about me
             </a>
 
-            <a href="#mywork" className=" p-2">
+            <a href="#mywork" className="p-2">
               my work
             </a>
 
-            <a href="#contact" className=" p-2">
+            <a href="#contact" className="p-2">
               contact me
             </a>
           </div>
         </nav>
 
-        <section id="about" className="h-screen  bg-blue-100 sticky top-14">
-          about me
+        <section
+          id="about"
+          className="h-screen  bg-blue-100 sticky top-14 flex flex-col justify-center items-center"
+        >
+          <div className="text-6xl text-center py-4">
+            Hi! I'm Gilberto Gabon
+          </div>
+          <div className="text-4xl text-center">Fullstack Developer</div>
         </section>
         <section id="mywork" className="h-screen bg-blue-300  sticky top-14">
           my work

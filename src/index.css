@@ -3,27 +3,30 @@
 @tailwind utilities;
 
 body {
+  margin: 0;
+  padding: 0;
   width: 100vw;
   height: 100vh;
-  margin: 0;
+  box-sizing: border-box;
 }
 
-.gcontainer {
+main {
   width: 100vw;
   height: 100vh;
+  position: relative;
+  scroll-behavior: smooth;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
 }
 
-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  scroll-snap-align: start;
+.gsection {
+  @apply w-screen h-screen snap-start flex flex-col justify-center items-center m-0;
 }
 
-footer {
-  width: 100vw;
+.card {
+  @apply flex justify-center items-center h-36 w-96 my-3 md:w-96 border border-solid border-black rounded-lg;
+}
+
+.btn-primary {
+  @apply border border-solid rounded-lg p-2 bg-blue-800 text-white;
 }
